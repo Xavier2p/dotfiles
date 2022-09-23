@@ -1,3 +1,4 @@
+alias rca='vim $DOTFILES/shell_alias.sh; source ~/.zshrc'
 alias ls='lsd --icon never'
 alias la='ls -Ah'
 alias ll='ls -l'

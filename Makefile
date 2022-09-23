@@ -1,3 +1,4 @@
+
 config: execute
 	echo "\n\nDOTFILES=${DOTFILES}" >> bashrc
 	echo "\n\nDOTFILES=${DOTFILES}" >> config.sh

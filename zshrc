@@ -1,7 +1,7 @@
 # Welcome on my .zshrc !
 
 source $DOTFILES/zsh_prompt.sh
-source $DOTFILES/shell_aliases.sh
+source $DOTFILES/shell_alias.sh
 source $DOTFILES/shell_functions.sh
 
 # AUTOLOAD

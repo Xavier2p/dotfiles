@@ -30,24 +30,15 @@ git clone git@github.com:Xavier2p/dotfiles.git
 
 ```bash
 cd dotfiles
-./config.sh
+make DOTFILES=/your/install/path
 ```
-### 3. Update the `$DOTFILES` variable
 
-In your `~/.zshrc` file, update the `$DOTFILES` variable to the path of the repo.
+### 3. Reload your shell
 
-- For macOS:
 ```bash
-DOTFILES="$HOME/Developer/dotfiles"
+source ~/.zshrc
 ```
-- For NixOS:
-```bash
-DOTFILES="$HOME/afs/dotfiles"
-```
-- For Debian:
-```bash
-DOTFILES="$HOME/.config/dotfiles"
-```
+
 ### 4. Install the packages
 *Not implemented yet*
 

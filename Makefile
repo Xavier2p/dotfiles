@@ -1,7 +1,7 @@
 config: execute
-	# echo "\n\nDOTFILES=${DOTFILES}" >> bashrc
+	echo "\n\nDOTFILES=${DOTFILES}" >> bashrc
 	echo "\n\nDOTFILES=${DOTFILES}" >> config.sh
-	# echo "\n\nDOTFILES=${DOTFILES}" >> zshrc
+	echo "\n\nDOTFILES=${DOTFILES}" >> zshrc
 	./config.sh
 
 execute:

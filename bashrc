@@ -1,6 +1,6 @@
 # Welcome on my .bashrc !
 
-source $DOTFILES/shell_aliases.sh
+source $DOTFILES/shell_alias.sh
 source $DOTFILES/shell_functions.sh
 
 

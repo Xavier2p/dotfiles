@@ -1,0 +1,12 @@
+[user]
+	name = Xavier2p
+	email = 83869794+Xavier2p@users.noreply.github.com
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+[pack]
+	windowMemory = 100m
+	packSizeLimit = 100m
+	threads = 1

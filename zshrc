@@ -1,7 +1,5 @@
 # Welcome on my .zshrc !
 
-DOTFILES=/Users/xavier2p/Developer/dotfiles
-
 source $DOTFILES/zsh_prompt.sh
 source $DOTFILES/shell_aliases.sh
 source $DOTFILES/shell_functions.sh

@@ -1,7 +1,5 @@
 # Welcome on my .bashrc !
 
-DOTFILES=/Users/xavier2p/Developer/dotfiles
-
 source $DOTFILES/shell_aliases.sh
 source $DOTFILES/shell_functions.sh
 

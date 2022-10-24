@@ -26,30 +26,33 @@ endif
 " PLUGINS ----------------------------------------------------------------- {{{
 
 call plug#begin('~/.vim/plugged')
-    Plug 'itchyny/lightline.vim'
-    Plug 'vim-scripts/c.vim'
-    Plug 'joshdick/onedark.vim'
-    Plug 'preservim/nerdtree'
-    Plug 'vim-scripts/indentpython.vim'
-    Plug 'frazrepo/vim-rainbow'
-    Plug 'chrisbra/vim-zsh'
-    Plug 'oranget/vim-csharp'
-    Plug 'tpope/vim-fugitive'
-    Plug 'airblade/vim-gitgutter'
-    Plug 'sainnhe/sonokai'
-    Plug 'Xuyuanp/nerdtree-git-plugin'
-    Plug 'lervag/vimtex'
-    Plug 'mattn/emmet-vim'
-    Plug 'rust-lang/rust.vim'
-    Plug 'godlygeek/tabular'
-    Plug 'preservim/vim-markdown'
-    Plug 'nvie/vim-flake8'
-    Plug 'https://gitlab.com/code-stats/code-stats-vim.git'
-    Plug 'LnL7/vim-nix'
-    Plug 'fratajczak/one-monokai-vim'
-    Plug 'preservim/nerdcommenter'
-    Plug 'neoclide/coc.nvim', {'branch': 'release'}
-    Plug 'github/copilot.vim'
+Plug 'itchyny/lightline.vim'
+Plug 'vim-scripts/c.vim'
+Plug 'joshdick/onedark.vim'
+Plug 'preservim/nerdtree'
+Plug 'vim-scripts/indentpython.vim'
+Plug 'frazrepo/vim-rainbow'
+Plug 'chrisbra/vim-zsh'
+Plug 'oranget/vim-csharp'
+Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
+Plug 'sainnhe/sonokai'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'lervag/vimtex'
+Plug 'mattn/emmet-vim'
+Plug 'rust-lang/rust.vim'
+Plug 'godlygeek/tabular'
+Plug 'preservim/vim-markdown'
+Plug 'nvie/vim-flake8'
+Plug 'https://gitlab.com/code-stats/code-stats-vim.git'
+Plug 'LnL7/vim-nix'
+Plug 'fratajczak/one-monokai-vim'
+Plug 'preservim/nerdcommenter'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'github/copilot.vim'
+Plug 'othree/xml.vim'
+Plug 'fratajczak/one-monokai-vim'
+Plug 'ryanoasis/vim-devicons'
 call plug#end()
 
 "}}}
@@ -106,9 +109,9 @@ let g:monokai_gui_italic = 1
 
 " Automated line number
 augroup numbertoggle
-  autocmd!
-  autocmd BufEnter,FocusGained,InsertLeave,WinEnter * if &nu && mode() != "i" | set rnu   | endif
-  autocmd BufLeave,FocusLost,InsertEnter,WinLeave   * if &nu                  | set nornu | endif
+    autocmd!
+    autocmd BufEnter,FocusGained,InsertLeave,WinEnter * if &nu && mode() != "i" | set rnu   | endif
+    autocmd BufLeave,FocusLost,InsertEnter,WinLeave   * if &nu                  | set nornu | endif
 augroup END
 " }}}
 
@@ -116,20 +119,20 @@ augroup END
 let g:lightline = {
             \ 'colorscheme': 'sonokai',
             \ 'active': {
-                \   'left': [ [ 'mode', 'paste' ],
-                \             [ 'gitbranch', 'readonly', 'filename', 'modified', 'stats' ] ],
-                \   'right': [ [ 'lineinfo' ],
-                \              [ 'percent' ],
-                \              [ 'fileformat', 'fileencoding', 'filetype', 'charvaluehex' ] ]
-                \ },
-                \ 'component_function': {
-                    \   'gitbranch': 'FugitiveHead',
-                    \   'stats': 'CodeStatsXp'
-                    \ },
-                    \  'component':{
-                    \    'charvaluehex': '0x%B'
-                    \ },
-                    \ }
+            \   'left': [ [ 'mode', 'paste' ],
+            \             [ 'gitbranch', 'readonly', 'filename', 'modified', 'stats' ] ],
+            \   'right': [ [ 'lineinfo' ],
+            \              [ 'percent' ],
+            \              [ 'fileformat', 'fileencoding', 'filetype', 'charvaluehex' ] ]
+            \ },
+            \ 'component_function': {
+            \   'gitbranch': 'FugitiveHead',
+            \   'stats': 'CodeStatsXp'
+            \ },
+            \  'component':{
+            \    'charvaluehex': '0x%B'
+            \ },
+            \ }
 "}}}
 
 " RAINBOW BRACKETS -------------------------------------------------------- {{{
@@ -146,26 +149,28 @@ let g:rainbow_ctermfgs = ['lightblue', 'lightgreen', 'yellow', 'red', 'magenta']
 
 " GIT-NERDTREE ------------------------------------------------------------ {{{
 let g:NERDTreeGitStatusIndicatorMapCustom = {
-            \ 'Modified'  :'✹',
-            \ 'Staged'    :'+',
+            \ 'Modified'  :'',
+            \ 'Staged'    :'',
             \ 'Untracked' :'±',
-            \ 'Renamed'   :'➜',
+            \ 'Renamed'   :'',
             \ 'Unmerged'  :'═',
-            \ 'Deleted'   :'x',
+            \ 'Deleted'   :'',
             \ 'Dirty'     :'✗',
-            \ 'Ignored'   :'≠',
+            \ 'Ignored'   :'-',
             \ 'Clean'     :'✔︎',
             \ 'Unknown'   :'?',
             \ }
 
 
 let g:NERDTreeGitStatusShowIgnored = 1
+let g:NERDTreeGitStatusUseNerdFonts = 1
+let g:NERDTreeGitStatusUntrackedFilesMode = 'all'
 
 " Git Gutter
-let g:gitgutter_sign_added = '✚'
-let g:gitgutter_sign_modified = '✹'
+let g:gitgutter_sign_added = '+'
+let g:gitgutter_sign_modified = '~'
 let g:gitgutter_sign_removed = '-'
-let g:gitgutter_sign_removed_first_line = '-'
+let g:gitgutter_sign_removed_first_line = 'ø'
 let g:gitgutter_sign_modified_removed = '-'
 let NERDTreeShowHidden=1
 
@@ -204,8 +209,6 @@ let g:NERDToggleCheckAllLines = 1
 " }}}
 
 " MAPPING ----------------------------------------------------------------- {{{
-inoremap <C-z> <esc>:u<cr>
-nnoremap <C-z> :u<cr>
 inoremap <C-w> <esc> gg=G :w<cr>
 nnoremap <C-w> :w<cr>
 inoremap <C-q> <esc>:q!<cr>
@@ -262,26 +265,26 @@ set signcolumn=yes
 " NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
 " other plugin before putting this into your config.
 inoremap <silent><expr> <TAB>
-      \ coc#pum#visible() ? coc#pum#next(1) :
-      \ CheckBackspace() ? "\<Tab>" :
-      \ coc#refresh()
+            \ coc#pum#visible() ? coc#pum#next(1) :
+            \ CheckBackspace() ? "\<Tab>" :
+            \ coc#refresh()
 inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
 
 " Make <CR> to accept selected completion item or notify coc.nvim to format
 " <C-g>u breaks current undo, please make your own choice.
 inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
-                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+            \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
 function! CheckBackspace() abort
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~# '\s'
+    let col = col('.') - 1
+    return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
 
 " Use <c-space> to trigger completion.
 if has('nvim')
-  inoremap <silent><expr> <c-space> coc#refresh()
+    inoremap <silent><expr> <c-space> coc#refresh()
 else
-  inoremap <silent><expr> <c-@> coc#refresh()
+    inoremap <silent><expr> <c-@> coc#refresh()
 endif
 
 " Use `[g` and `]g` to navigate diagnostics
@@ -299,11 +302,11 @@ nmap <silent> gr <Plug>(coc-references)
 nnoremap <silent> K :call ShowDocumentation()<CR>
 
 function! ShowDocumentation()
-  if CocAction('hasProvider', 'hover')
-    call CocActionAsync('doHover')
-  else
-    call feedkeys('K', 'in')
-  endif
+    if CocAction('hasProvider', 'hover')
+        call CocActionAsync('doHover')
+    else
+        call feedkeys('K', 'in')
+    endif
 endfunction
 
 " Highlight the symbol and its references when holding the cursor.
@@ -317,11 +320,11 @@ xmap <leader>f  <Plug>(coc-format-selected)
 nmap <leader>f  <Plug>(coc-format-selected)
 
 augroup mygroup
-  autocmd!
-  " Setup formatexpr specified filetype(s).
-  autocmd FileType typescript,json setl formatexpr=CocAction('formatSelected')
-  " Update signature help on jump placeholder.
-  autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
+    autocmd!
+    " Setup formatexpr specified filetype(s).
+    autocmd FileType typescript,json setl formatexpr=CocAction('formatSelected')
+    " Update signature help on jump placeholder.
+    autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
 augroup end
 
 " Applying codeAction to the selected region.
@@ -350,12 +353,12 @@ omap ac <Plug>(coc-classobj-a)
 
 " Remap <C-f> and <C-b> for scroll float windows/popups.
 if has('nvim-0.4.0') || has('patch-8.2.0750')
-  nnoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-f>"
-  nnoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-b>"
-  inoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(1)\<cr>" : "\<Right>"
-  inoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(0)\<cr>" : "\<Left>"
-  vnoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-f>"
-  vnoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-b>"
+    nnoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-f>"
+    nnoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-b>"
+    inoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(1)\<cr>" : "\<Right>"
+    inoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(0)\<cr>" : "\<Left>"
+    vnoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-f>"
+    vnoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-b>"
 endif
 
 " Use CTRL-S for selections ranges.

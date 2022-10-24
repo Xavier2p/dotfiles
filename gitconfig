@@ -10,3 +10,5 @@
 	windowMemory = 100m
 	packSizeLimit = 100m
 	threads = 1
+[init]
+	defaultBranch = master

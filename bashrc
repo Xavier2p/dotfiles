@@ -1,6 +1,6 @@
 # Welcome on my .bashrc !
 
-DOTFILES=~/Developer/dotfiles
+DOTFILES=$HOME/.config/dotfiles
 export BASH_SILENCE_DEPRECATION_WARNING=1
 
 source $DOTFILES/shell_alias.sh

@@ -209,10 +209,10 @@ let g:NERDToggleCheckAllLines = 1
 " }}}
 
 " MAPPING ----------------------------------------------------------------- {{{
-inoremap <C-w> <esc> gg=G :w<cr>
-nnoremap <C-w> :w<cr>
-inoremap <C-q> <esc>:q!<cr>
-nnoremap <C-q> :q!<cr>
+" inoremap <C-w> <esc> gg=G :w<cr>
+" nnoremap <C-w> :w<cr>
+" inoremap <C-q> <esc>:q!<cr>
+" nnoremap <C-q> :q!<cr>
 nnoremap <C-1> :NERDTreeToggle<CR>
 inoremap " ""<left>
 inoremap ' ''<left>

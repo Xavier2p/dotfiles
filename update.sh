@@ -1,0 +1,2 @@
+brew upgrade
+rustup update

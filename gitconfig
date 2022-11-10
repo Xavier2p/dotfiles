@@ -12,3 +12,5 @@
 	threads = 1
 [init]
 	defaultBranch = master
+[core]
+	excludesfile = ~/.config/dotfiles/gitignore_global

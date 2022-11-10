@@ -1,4 +1,4 @@
-DOTFILES=/Users/xavier2p/Developer/dotfiles
+DOTFILES=$HOME/.config/dotfiles
 
 ln -fs $DOTFILES/zshrc ~/.zshrc
 ln -fs $DOTFILES/bashrc ~/.bashrc

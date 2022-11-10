@@ -1,6 +1,6 @@
 # Welcome on my .zshrc !
 
-DOTFILES=/Users/xavier2p/Developer/dotfiles
+DOTFILES=$HOME/.config/dotfiles
 
 source $DOTFILES/zsh_prompt.sh
 source $DOTFILES/shell_alias.sh

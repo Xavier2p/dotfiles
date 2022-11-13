@@ -87,14 +87,14 @@ style = 'bold yellow'
 
 [hostname] # Hostname
 ssh_only = true
-format = '[$ssh_symbo](drawings)[$hostname]($style)'
+format = '[@](drawings)[$ssh_symbol$hostname]($style)'
 style = 'bold green'
 ssh_symbol = ''
 
 [localip] # Local IP
 ssh_only = true
 disabled = false
-format = '[\[$localipv4\]]($style)'
+format = '[\[$localipv4\]]($style) '
 style = 'bold green'
 
 [memory_usage]
@@ -141,6 +141,6 @@ disabled = false
 time_format = '%a %d-%H:%M'
 
 [username] # Username
-format = '[$user]($style_user)'
+format = '[$user]($style)'
 style_user = 'bold orange'
-
+style_root = 'bold red'

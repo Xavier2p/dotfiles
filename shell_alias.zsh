@@ -1,6 +1,7 @@
 # MACOS ALIASES
 if [[ $_distro == "macos" ]]
 then
+    alias ls='lsd'
     alias bell='while true; do tput bel; done'
     alias startnix='nix-shell -p ripgrep'
     alias cdo='cd ~/Library/Mobile\ Documents/iCloud\~md\~obsidian/Documents/Pikachu'
@@ -18,6 +19,7 @@ then
     alias cdp='cd /Users/xavier2p/OneDrive\ -\ EPITA/projects/S3-OCR'
 elif [[ $_distro == "raspbian" || $_distro == "debian" ]]
 then
+    alias ls='ls --color=auto'
     alias bat='batcat'
     alias ifconfig='/sbin/ifconfig'
     alias temp='vcgencmd measure_temp'
@@ -28,7 +30,6 @@ fi
 # GLOBAL ALIASES
 alias rca='vim $DOTFILES/shell_alias.zsh; source ~/.zshrc'
 alias l='ls -lh'
-alias ls='lsd'
 alias la='ls -Ah'
 alias ll='ls -l --header'
 alias lal='la -l --header'

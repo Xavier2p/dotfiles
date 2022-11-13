@@ -9,7 +9,7 @@ format = '''
 right_format = '''
 $time[─┘](drawings)
 '''
-# continuation_prompt = "▶▶"
+continuation_prompt = "▶▶"
 add_newline = false
 scan_timeout = 10
 palette = 'main'
@@ -87,9 +87,9 @@ style = 'bold yellow'
 
 [hostname] # Hostname
 ssh_only = true
-format = '[@](drawings)[$ssh_symbol$hostname]($style)'
+format = '[@](bold drawings)[$ssh_symbol$hostname]($style)'
 style = 'bold green'
-ssh_symbol = ''
+ssh_symbol = ' '
 
 [localip] # Local IP
 ssh_only = true

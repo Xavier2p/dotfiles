@@ -87,9 +87,8 @@ style = 'bold yellow'
 
 [hostname] # Hostname
 ssh_only = true
-format = '[@](bold drawings)[$ssh_symbol$hostname]($style)'
+format = '[@](bold drawings)[$hostname]($style)'
 style = 'bold green'
-ssh_symbol = ' '
 
 [localip] # Local IP
 ssh_only = true

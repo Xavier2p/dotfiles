@@ -15,22 +15,23 @@ This repo store all (or almost) my dotfiles.
 
 ### 1. Clone this repo
 
-Via HTTPS:
+#### Via HTTPS
 
 ```bash
-git clone https://github.com/Xavier2p/dotfiles.git
+git clone https://github.com/Xavier2p/dotfiles.git ~/.config/dotfiles
 ```
 
-Via SSH:
+#### Via SSH
+
 ```bash
-git clone git@github.com:Xavier2p/dotfiles.git
+git clone git@github.com:Xavier2p/dotfiles.git ~/.config/dotfiles
 ```
 
 ### 2. Run the install script
 
 ```bash
-cd dotfiles
-make DOTFILES=/your/install/path
+cd ~/.config/dotfiles
+make
 ```
 
 ### 3. Reload your shell
@@ -38,8 +39,5 @@ make DOTFILES=/your/install/path
 ```bash
 source ~/.zshrc
 ```
-
-### 4. Install the packages
-*Not implemented yet*
 
 ### 5. Enjoy!

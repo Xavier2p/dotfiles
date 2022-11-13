@@ -149,14 +149,14 @@ let g:rainbow_ctermfgs = ['lightblue', 'lightgreen', 'yellow', 'red', 'magenta']
 
 " GIT-NERDTREE ------------------------------------------------------------ {{{
 let g:NERDTreeGitStatusIndicatorMapCustom = {
-            \ 'Modified'  :'',
-            \ 'Staged'    :'',
-            \ 'Untracked' :'±',
+            \ 'Modified'  :'±',
+            \ 'Staged'    :'+',
+            \ 'Untracked' :'!',
             \ 'Renamed'   :'',
             \ 'Unmerged'  :'═',
             \ 'Deleted'   :'',
             \ 'Dirty'     :'✗',
-            \ 'Ignored'   :'-',
+            \ 'Ignored'   :'✗',
             \ 'Clean'     :'✔︎',
             \ 'Unknown'   :'?',
             \ }

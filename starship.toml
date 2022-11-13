@@ -1,0 +1,146 @@
+# Get editor completions based on the config schema
+"$schema" = 'https://starship.rs/config-schema.json'
+
+# FORMAT PROMPT
+format = '''
+[┌── ](drawings)$env_var$username$hostname$localip$directory$git_branch$git_commit$git_status$git_metrics$battery$container$docker_context$c$rust$golang$python$nodejs$java$php$dotnet$elixir$erlang$gcloud$kubernetes$aws$package$fill$cmd_duration$memory_usage[─┐ ](drawings)
+[└─ ](drawings)$sudo$character
+'''
+right_format = '''
+$time[─┘](drawings)
+'''
+# continuation_prompt = "▶▶"
+add_newline = false
+scan_timeout = 10
+palette = 'main'
+
+[palettes.main] # main style
+blue = '21'
+cyan = '51'
+green = '118'
+red = '196'
+orange = '208'
+drawings = '001'
+
+[env_var.STARSHIP_DISTRO]
+format = '[$env_value](bold drawings) '
+variable = "STARSHIP_DISTRO"
+disabled = false
+
+[battery] # battery module
+format = '[$symbol$percentage]($style) '
+disabled = false
+
+[c] # C module
+format = 'lang: [$symbol \($name-$version\)]($style) '
+symbol = 'C'
+style = 'bold blue'
+
+[character] # Return value indicator
+success_symbol = '[ﰲ](bold green)'
+error_symbol = '[ﰲ](bold red)'
+vicmd_symbol = '[V](bold green)'
+
+[cmd_duration] # Command duration
+min_time = 500
+# format = '[\[](drawings)[$duration]($style)[\]─](drawings)'
+format = ' [$duration]($style) '
+style = 'bold yellow'
+show_milliseconds = false
+
+[container]
+format = '[$symbol \[$name\]]($style) '
+
+[directory] # Directory
+format = '[ $path]($style)[$read_only]($read_only_style) '
+truncation_length = 3
+
+[docker_context] # Docker
+format = 'via [$symbol $context](blue bold)'
+symbol = ''
+
+[fill] # Fill
+symbol = "─"
+style = "drawings"
+disabled = false
+
+[git_branch] # Git branch
+format = 'on [$symbol$branch]($style)'
+symbol = ' '
+style = 'bold yellow'
+
+[git_commit] # Git commit
+format = ' commit: [$hash$tag]($style)'
+style = 'bold yellow'
+tag_symbol = ' '
+tag_disabled = false
+
+[git_metrics] # Git metrics
+added_style = 'bold green'
+deleted_style = 'bold red'
+format = '[+$added]($added_style)/[-$deleted]($deleted_style) '
+disabled = true
+
+[git_status] # Git status
+format = '[$all_status$ahead_behind]($style) '
+style = 'bold yellow'
+
+[hostname] # Hostname
+ssh_only = true
+format = 'at [$ssh_symbol$hostname]($style) '
+style = 'bold green'
+ssh_symbol = ' '
+
+[localip] # Local IP
+ssh_only = true
+disabled = false
+format = '[$localipv4]($style) '
+style = 'bold green'
+
+[memory_usage]
+disabled = false
+format = '[\[](drawings)[$symbol$ram\($ram_pct\)]($style)[\]](drawings)'
+threshold = 75
+symbol = ' '
+style = "bold dimmed green"
+
+[package] # Package
+disabled = false
+format = 'pkg: [$symbol$version]($style) '
+symbol = ''
+
+[python] # Python
+format = 'lang: [$symbol \($version\)]($style) '
+symbol = ''
+style = 'bold blue'
+
+[rust] # Rust
+format = 'lang: [$symbol \($version\)]($style) '
+symbol = ''
+style = 'bold blue'
+
+[shell] # Shell
+format = '[$indicator]($style) '
+style = 'bold green'
+disabled = true
+
+[status] # Status
+disabled = false
+format = '[$symbol$status]($style) '
+
+[sudo] # Sudo
+format = '[$symbol]($style) '
+symbol = '#'
+style = 'bold red'
+disabled = false
+
+[time] # Time
+format = '[\[](drawings)[$time]($style)[\]](drawings)'
+style = 'bold orange'
+disabled = false
+time_format = '%a %d-%H:%M'
+
+[username] # Username
+format = '[$user]($style_user) '
+style_user = 'bold orange'
+

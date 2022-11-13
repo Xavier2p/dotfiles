@@ -1,12 +1,9 @@
 # Welcome on my .zshrc !
 
-DOTFILES=$HOME/.config/dotfiles
-
-source $DOTFILES/zsh_prompt.sh
-source $DOTFILES/shell_alias.sh
-source $DOTFILES/shell_functions.sh
-source ~/Developer/packages/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
-source ~/Developer/packages/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $HOME/.config/dotfiles/rcfile
+source $DOTFILES/zsh_prompt.zsh
+source ~/.config/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
+source ~/.config/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # AUTOLOAD
 setopt autocd
@@ -15,3 +12,5 @@ neofetch
 
 ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 bindkey '\t' autosuggest-accept
+
+eval "$(starship init zsh)"

@@ -17,8 +17,7 @@ then
     alias cdal='cd ~/OneDrive\ -\ EPITA/Algo/S3/prefix_trees'
     alias dl='cd ~/Movies/dl/'
     alias cdp='cd /Users/xavier2p/OneDrive\ -\ EPITA/projects/S3-OCR'
-elif [[ $_distro == "raspbian" || $_distro == "debian" ]]
-then
+else
     alias ls='ls --color=auto'
     alias bat='batcat'
     alias ifconfig='/sbin/ifconfig'

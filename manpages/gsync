@@ -1,0 +1,41 @@
+.\" ManPage for `gsync'
+
+.TH gsync 1 "14 November 2022" "1.0" "gsync man page"
+
+.SH NAME
+gsync \- All-in-One git command
+
+.SH SYNOPSIS
+.B gsync [-v] [-u] [-h] [-m
+.I message
+.B ] [-t
+.I tag-name
+.B ]
+
+.SH DESCRIPTION
+.B gsync
+is a powerful command to use easily git! In just one line, you can add all your files, commit and push with tags if you want.
+
+.SH OPTIONS
+.TP
+.B -v
+enable verbose mode. Default verbose mode is off.
+.TP
+.B -u
+add only the files updated. Default is all
+.TP
+.B -h
+show help from the program and exit.
+.TP
+.B "-m message"
+set the message for the commit. Default is "[autocommit]: Work in Progress".
+.TP
+.B "-t tag-name"
+set the tag-name, and push following tags. Default tags are off.
+
+.SH SEE ALSO
+git(1)
+
+.SH AUTHOR
+Xavier <EAGLE> de Place
+.I https://github.com/Xavier2p

@@ -65,8 +65,8 @@ style = "drawings"
 disabled = false
 
 [git_branch] # Git branch
-format = 'on [$symbol$branch]($style)'
-symbol = ' '
+format = 'on [$symbol git:$branch]($style)'
+symbol = ''
 style = 'bold yellow'
 
 [git_commit] # Git commit

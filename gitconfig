@@ -1,6 +1,6 @@
 [user]
 	name = Xavier2p
-	email = 83869794+Xavier2p@users.noreply.github.com
+	email = xavier.de-place@epita.fr
 [filter "lfs"]
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process

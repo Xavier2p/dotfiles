@@ -11,7 +11,8 @@
 ### '''
 
 format = '''
-$env_var$username$hostname$localip$directory$git_branch$git_commit$git_status$container$docker_context$c$rust$golang$python$nodejs$java$php$dotnet$elixir$erlang$gcloud$kubernetes$aws$package$memory_usage
+$username$hostname$localip
+$env_var$directory$git_branch$git_commit$git_status$container$docker_context$c$rust$golang$python$nodejs$java$php$dotnet$elixir$erlang$gcloud$kubernetes$aws$package$memory_usage
 $sudo$character
 '''
 right_format = '''$cmd_duration'''
@@ -100,8 +101,8 @@ style = 'bold green'
 [localip] # Local IP
 ssh_only = true
 disabled = false
-format = '[\[$localipv4\]]($style) '
-style = 'bold green'
+format = ' [\[$localipv4\]]($style)'
+style = 'bold blue'
 
 [memory_usage]
 disabled = false

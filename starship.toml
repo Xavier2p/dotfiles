@@ -78,8 +78,8 @@ tag_disabled = false
 [git_metrics] # Git metrics
 added_style = 'bold green'
 deleted_style = 'bold red'
-format = '[+$added]($added_style)/[-$deleted]($deleted_style) '
-disabled = true
+format = '[\[](bold yellow)[+$added]($added_style)[/](bold yellow)[-$deleted]($deleted_style)[\]](bold yellow) '
+disabled = false
 
 [git_status] # Git status
 format = '[$all_status$ahead_behind]($style) '

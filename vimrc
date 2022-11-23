@@ -26,33 +26,31 @@ endif
 " PLUGINS ----------------------------------------------------------------- {{{
 
 call plug#begin('~/.vim/plugged')
-Plug 'itchyny/lightline.vim'
-Plug 'vim-scripts/c.vim'
-Plug 'joshdick/onedark.vim'
-Plug 'preservim/nerdtree'
-Plug 'vim-scripts/indentpython.vim'
-Plug 'frazrepo/vim-rainbow'
-Plug 'chrisbra/vim-zsh'
-Plug 'oranget/vim-csharp'
-Plug 'tpope/vim-fugitive'
-Plug 'airblade/vim-gitgutter'
-Plug 'sainnhe/sonokai'
-Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'lervag/vimtex'
-Plug 'mattn/emmet-vim'
-Plug 'rust-lang/rust.vim'
-Plug 'godlygeek/tabular'
-Plug 'preservim/vim-markdown'
-Plug 'nvie/vim-flake8'
-Plug 'https://gitlab.com/code-stats/code-stats-vim.git'
-Plug 'LnL7/vim-nix'
-Plug 'fratajczak/one-monokai-vim'
-Plug 'preservim/nerdcommenter'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'github/copilot.vim'
-Plug 'othree/xml.vim'
-Plug 'fratajczak/one-monokai-vim'
-Plug 'ryanoasis/vim-devicons'
+    Plug 'itchyny/lightline.vim'
+    Plug 'vim-scripts/c.vim'
+    Plug 'preservim/nerdtree'
+    Plug 'vim-scripts/indentpython.vim'
+    Plug 'frazrepo/vim-rainbow'
+    Plug 'chrisbra/vim-zsh'
+    Plug 'tpope/vim-fugitive'
+    Plug 'airblade/vim-gitgutter'
+    Plug 'Xuyuanp/nerdtree-git-plugin'
+    Plug 'lervag/vimtex'
+    Plug 'mattn/emmet-vim'
+    Plug 'rust-lang/rust.vim'
+    Plug 'godlygeek/tabular'
+    Plug 'preservim/vim-markdown'
+    Plug 'nvie/vim-flake8'
+    Plug 'https://gitlab.com/code-stats/code-stats-vim.git'
+    Plug 'LnL7/vim-nix'
+    Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    Plug 'github/copilot.vim'
+    Plug 'ryanoasis/vim-devicons'
+    Plug 'vim-scripts/fortran.vim'
+    Plug 'sainnhe/sonokai'
+    Plug 'sheerun/vim-polyglot'
+    Plug 'pineapplegiant/spaceduck', { 'branch': 'main' }
+    Plug 'haishanh/night-owl.vim'
 call plug#end()
 
 "}}}
@@ -70,7 +68,7 @@ set list
 set listchars=tab:>─,eol:¬,trail:\ ,nbsp:¤
 set laststatus=2
 
-colorscheme sonokai
+colorscheme night-owl
 " AutoIndent
 set autoindent
 set smartindent
@@ -117,7 +115,7 @@ augroup END
 
 " LIGHTLINE --------------------------------------------------------------- {{{
 let g:lightline = {
-            \ 'colorscheme': 'sonokai',
+            \ 'colorscheme': 'nightowl',
             \ 'active': {
             \   'left': [ [ 'mode', 'paste' ],
             \             [ 'gitbranch', 'readonly', 'filename', 'modified', 'stats' ] ],

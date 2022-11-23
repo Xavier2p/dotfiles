@@ -2,15 +2,22 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
 # FORMAT PROMPT
+### format = '''
+### [┌── ](drawings)$env_var$username$hostname$localip$directory$git_branch$git_commit$git_status$git_metrics$battery$container$docker_context$c$rust$golang$python$nodejs$java$php$dotnet$elixir$erlang$gcloud$kubernetes$aws$package$fill$cmd_duration$memory_usage[─┐ ](drawings)
+### [└─ ](drawings)$sudo$character
+### '''
+### right_format = '''
+### $time[─┘](drawings)
+### '''
+
 format = '''
-[┌── ](drawings)$env_var$username$hostname$localip$directory$git_branch$git_commit$git_status$git_metrics$battery$container$docker_context$c$rust$golang$python$nodejs$java$php$dotnet$elixir$erlang$gcloud$kubernetes$aws$package$fill$cmd_duration$memory_usage[─┐ ](drawings)
-[└─ ](drawings)$sudo$character
+$env_var$username$hostname$localip$directory$git_branch$git_commit$git_status$container$docker_context$c$rust$golang$python$nodejs$java$php$dotnet$elixir$erlang$gcloud$kubernetes$aws$package$memory_usage
+$sudo$character
 '''
-right_format = '''
-$time[─┘](drawings)
-'''
-continuation_prompt = "▶▶"
-add_newline = false
+right_format = '''$cmd_duration'''
+
+continuation_prompt = "➜"
+add_newline = true
 scan_timeout = 10
 palette = 'main'
 
@@ -23,7 +30,7 @@ orange = '208'
 drawings = '001'
 
 [env_var.STARSHIP_DISTRO]
-format = '[$env_value](bold drawings) '
+format = '[$env_value](bold white) '
 variable = "STARSHIP_DISTRO"
 disabled = false
 
@@ -37,8 +44,8 @@ symbol = 'C'
 style = 'bold blue'
 
 [character] # Return value indicator
-success_symbol = '[ﰲ](bold green)'
-error_symbol = '[ﰲ](bold red)'
+success_symbol = '[➜](bold green)'
+error_symbol = '[➜](bold red)'
 vicmd_symbol = '[V](bold green)'
 
 [cmd_duration] # Command duration

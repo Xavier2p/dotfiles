@@ -11,7 +11,6 @@ bashcompinit
 # AUTOLOAD
 setopt autocd
 if [ -e /Users/xavier2p/.nix-profile/etc/profile.d/nix.sh ]; then . /Users/xavier2p/.nix-profile/etc/profile.d/nix.sh; fi
-neofetch
 
 ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 bindkey '\t' autosuggest-accept
@@ -23,4 +22,4 @@ then
     export PATH=$PATH:/Users/xavier2p/Library/Python/3.10/bin
 fi
 
-
+neofetch

@@ -51,7 +51,7 @@ vicmd_symbol = '[V](bold green)'
 [cmd_duration] # Command duration
 min_time = 500
 # format = '[\[](drawings)[$duration]($style)[\]─](drawings)'
-format = ' [$duration]($style) '
+format = ' [$duration]($style)'
 style = 'bold yellow'
 show_milliseconds = false
 

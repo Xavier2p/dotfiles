@@ -27,7 +27,6 @@ endif
 
 call plug#begin('~/.vim/plugged')
     Plug 'itchyny/lightline.vim'
-    Plug 'vim-scripts/c.vim'
     Plug 'preservim/nerdtree'
     Plug 'vim-scripts/indentpython.vim'
     Plug 'frazrepo/vim-rainbow'
@@ -35,21 +34,15 @@ call plug#begin('~/.vim/plugged')
     Plug 'tpope/vim-fugitive'
     Plug 'airblade/vim-gitgutter'
     Plug 'Xuyuanp/nerdtree-git-plugin'
-    Plug 'lervag/vimtex'
-    Plug 'mattn/emmet-vim'
     Plug 'rust-lang/rust.vim'
-    Plug 'godlygeek/tabular'
     Plug 'preservim/vim-markdown'
-    Plug 'nvie/vim-flake8'
     Plug 'https://gitlab.com/code-stats/code-stats-vim.git'
     Plug 'LnL7/vim-nix'
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     Plug 'github/copilot.vim'
     Plug 'ryanoasis/vim-devicons'
-    Plug 'vim-scripts/fortran.vim'
     Plug 'sainnhe/sonokai'
     Plug 'sheerun/vim-polyglot'
-    Plug 'pineapplegiant/spaceduck', { 'branch': 'main' }
     Plug 'haishanh/night-owl.vim'
 call plug#end()
 
@@ -95,14 +88,10 @@ set clipboard=unnamed
 "}}}
 
 " INIT MODULES ------------------------------------------------------------ {{{
-let g:vimtex_view_method = 'zathura'
 let g:rustfmt_autosave = 1
-let g:vimtex_compiler_method = 'latexrun'
 let g:vim_markdown_folding_disabled = 1
 let python_highlight_all=1
 let g:codestats_api_key='SFMyNTY.V0dGMmFXVnlNbkE9IyNNVGM1TmpBPQ.ZDnafaSIKZi7uZLf59qQdQg2QqqEYm0TwY0ULKNGpDM'
-let g:monokai_term_italic = 1
-let g:monokai_gui_italic = 1
 
 
 " Automated line number
@@ -174,56 +163,26 @@ let NERDTreeShowHidden=1
 
 autocmd VimEnter * NERDTree | wincmd p
 autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
-" }}}
 
-" NERDCOMMENTER ----------------------------------------------------------- {{{
-" Create default mappings
-let g:NERDCreateDefaultMappings = 1
-
-" Add spaces after comment delimiters by default
-let g:NERDSpaceDelims = 1
-
-" Use compact syntax for prettified multi-line comments
-let g:NERDCompactSexyComs = 1
-
-" Align line-wise comment delimiters flush left instead of following code indentation
-let g:NERDDefaultAlign = 'left'
-
-" Set a language to use its alternate delimiters by default
-let g:NERDAltDelims_java = 0
-
-" Add your own custom formats or override the defaults
-let g:NERDCustomDelimiters = { 'c': { 'left': '/**','right': '*/' } }
-
-" Allow commenting and inverting empty lines (useful when commenting a region)
-let g:NERDCommentEmptyLines = 1
-
-" Enable trimming of trailing whitespace when uncommenting
-let g:NERDTrimTrailingWhitespace = 1
-
-" Enable NERDCommenterToggle to check all selected lines is commented or not 
-let g:NERDToggleCheckAllLines = 1
+" Vim Devicons
+let g:webdevicons_enable_nerdtree = 1
+let g:webdevicons_conceal_nerdtree_brackets = 1
+let g:WebDevIconsNerdTreeAfterGlyphPadding = ' '
 
 " }}}
 
 " MAPPING ----------------------------------------------------------------- {{{
-" inoremap <C-w> <esc> gg=G :w<cr>
-" nnoremap <C-w> :w<cr>
-" inoremap <C-q> <esc>:q!<cr>
-" nnoremap <C-q> :q!<cr>
 nnoremap <C-1> :NERDTreeToggle<CR>
 inoremap " ""<left>
 inoremap ' ''<left>
 inoremap ( ()<left>
 inoremap [ []<left>
 inoremap { {}<left>
-" inoremap < <><left>
 inoremap {<CR> {<CR>}<ESC>O
 inoremap {;<CR> {<CR>};<ESC>O
 silent! unmap <C-k>
 map <silent> <C-k> :call ClangFormat()<CR>
 map <C-o> :NERDTreeToggle<CR>
-map <C-/> <plug>NERDCommenterToggle
 " }}}
 
 highlight ExtraWhitespace ctermbg=red guibg=red

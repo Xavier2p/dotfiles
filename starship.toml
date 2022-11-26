@@ -14,7 +14,7 @@ format = '''
 $username$hostname$localip$env_var$directory$git_branch$git_commit$git_status$container$docker_context$c$rust$golang$python$nodejs$java$php$dotnet$elixir$erlang$gcloud$kubernetes$aws$package$memory_usage
 $sudo$character
 '''
-right_format = '''$cmd_duration'''
+right_format = '''$cmd_duration$jobs'''
 
 continuation_prompt = "➜"
 add_newline = true
@@ -97,10 +97,15 @@ ssh_only = true
 format = '[@](bold drawings)[$hostname]($style)'
 style = 'bold green'
 
+[jobs] # Jobs
+format = ' [\[$number\]]($style)'
+style = 'orange'
+number_threshold = 1
+
 [localip] # Local IP
 ssh_only = true
 disabled = false
-format = ' [\[$localipv4\]]($style)\n'
+format = ' [\[$localipv4\]]($style)$line_break'
 style = 'bold blue'
 
 [memory_usage]

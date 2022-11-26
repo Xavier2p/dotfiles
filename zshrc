@@ -23,3 +23,4 @@ then
 fi
 
 neofetch
+ls

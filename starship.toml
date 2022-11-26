@@ -102,6 +102,9 @@ format = ' [\[$number\]]($style)'
 style = 'orange'
 number_threshold = 1
 
+[line_break] # Line break
+disabled = false
+
 [localip] # Local IP
 ssh_only = true
 disabled = false

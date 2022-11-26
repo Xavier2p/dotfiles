@@ -108,7 +108,7 @@ disabled = false
 [localip] # Local IP
 ssh_only = true
 disabled = false
-format = ' [\[$localipv4\]]($style)$line_break'
+format = ' [\[$localipv4\]]($style)\r\n'
 style = 'bold blue'
 
 [memory_usage]

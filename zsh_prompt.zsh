@@ -33,7 +33,7 @@ case $_distro in
     *manjaro*)               ICON="";;
     *rhel*)                  ICON="";;
     *macos*)                 ICON="";;
-    *)                       ICON="";;
+    *)                       ICON="\r\n";;
 esac
 
 # Set the prompt

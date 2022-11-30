@@ -80,7 +80,6 @@ set foldmethod=marker
 packadd! termdebug
 set hlsearch
 nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
-set mouse=a
 set incsearch
 set backspace=indent,eol,start
 set clipboard=unnamed
@@ -180,9 +179,6 @@ inoremap [ []<left>
 inoremap { {}<left>
 inoremap {<CR> {<CR>}<ESC>O
 inoremap {;<CR> {<CR>};<ESC>O
-silent! unmap <C-k>
-map <silent> <C-k> :call ClangFormat()<CR>
-map <C-o> :NERDTreeToggle<CR>
 " }}}
 
 highlight ExtraWhitespace ctermbg=red guibg=red

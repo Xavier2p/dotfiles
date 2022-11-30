@@ -47,7 +47,10 @@ style = 'bold blue'
 [character] # Return value indicator
 success_symbol = '[➜](bold green)'
 error_symbol = '[➜](bold red)'
-vicmd_symbol = '[V](bold green)'
+vimcmd_symbol = '[](blue)'
+vimcmd_replace_one_symbol = '[](orange)'
+vimcmd_replace_symbol = '[](red)'
+vimcmd_visual_symbol = '[](purple)'
 
 [cmd_duration] # Command duration
 min_time = 500
@@ -73,7 +76,7 @@ style = "drawings"
 disabled = false
 
 [git_branch] # Git branch
-format = 'on [$symbol git:$branch]($style)'
+format = 'on [$symbol git::$branch]($style)'
 symbol = ''
 style = 'bold yellow'
 

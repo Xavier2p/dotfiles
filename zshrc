@@ -1,5 +1,6 @@
 # Welcome on my .zshrc !
 
+fpath+=~/.config/zsh/completions/
 source $HOME/.config/dotfiles/rcfile
 source $DOTFILES/zsh_prompt.zsh
 source ~/.config/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
@@ -24,3 +25,4 @@ fi
 
 neofetch
 ls
+# arch --arch x86_64 <cmd> to exec cmd in arch x86_64

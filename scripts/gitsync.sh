@@ -59,5 +59,5 @@ else
 fi
 
 if test "$verbose" = true; then
-    git reflog -n 10
+    git log --all --decorate --oneline --graph
 fi

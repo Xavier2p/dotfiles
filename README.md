@@ -15,14 +15,6 @@ This repo store all (or almost) my dotfiles.
 
 ### 1. Clone this repo
 
-#### Via HTTPS
-
-```bash
-git clone https://github.com/Xavier2p/dotfiles.git ~/.config/dotfiles
-```
-
-#### Via SSH
-
 ```bash
 git clone git@github.com:Xavier2p/dotfiles.git ~/.config/dotfiles
 ```
@@ -41,3 +33,30 @@ source ~/.zshrc
 ```
 
 ### 5. Enjoy!
+
+## Tree
+
+```txt
+~
+├── .config
+│   ├── dotfiles
+│   │   ├── alacritty.yml   => ~/.config/alacritty/alacritty.yml
+│   │   ├── bashrc          => ~/.bashrc
+│   │   ├── gitconfig       => ~/.gitconfig
+│   │   ├── gitignore       => ~/.gitignore
+│   │   ├── gtk3.0.ini      => ~/.config/gtk-3.0/settings.ini
+│   │   ├── lsd.yaml        => ~/.config/lsd/config.yaml
+│   │   ├── neofetch.conf   => ~/.config/neofetch/config.conf
+│   │   ├── vimrc           => ~/.vimrc
+│   │   └── zshrc           => ~/.zshrc
+│   ├── nvim
+│   │   └── ...
+│   ├── packages
+│   │   └── ...
+│   ├── zsh
+│   │   ├── zsh-autosuggestions
+│   │   ├── zsh-completions
+│   │   └── zsh-syntax-highlighting
+│   └── ...
+└── ...
+```

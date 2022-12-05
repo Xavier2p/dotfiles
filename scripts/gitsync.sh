@@ -1,5 +1,6 @@
 PROGNAME="sync"
 
+
 usage() {
     cat << EOF >&2
 Usage: $PROGNAME [-h] [-v] [-u] [-m <str>] [-t <str>]

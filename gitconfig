@@ -14,3 +14,6 @@
 	defaultBranch = master
 [core]
 	excludesfile = ~/.config/dotfiles/gitignore_global
+	pager = bat
+[pager]
+	branch = cat

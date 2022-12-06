@@ -160,8 +160,8 @@ let g:gitgutter_sign_removed_first_line = 'ø'
 let g:gitgutter_sign_modified_removed = '-'
 let NERDTreeShowHidden=1
 
-autocmd VimEnter * NERDTree | wincmd p
-autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
+" autocmd VimEnter * NERDTree | wincmd p
+" autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
 
 " Vim Devicons
 let g:webdevicons_enable_nerdtree = 1

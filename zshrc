@@ -11,7 +11,6 @@ bashcompinit
 
 # AUTOLOAD
 setopt autocd
-if [ -e /Users/xavier2p/.nix-profile/etc/profile.d/nix.sh ]; then . /Users/xavier2p/.nix-profile/etc/profile.d/nix.sh; fi
 
 ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 bindkey '\t' autosuggest-accept
@@ -21,6 +20,9 @@ eval "$(starship init zsh)"
 if [[ $_distro == "macos" ]]
 then
     export PATH=$PATH:/Users/xavier2p/Library/Python/3.10/bin
+    export C_INCLUDE_PATH=/usr/local/include
+    export CPLUS_INCLUDE_PATH=/usr/local/include
+    export LIBRARY_PATH=/usr/local/lib
 fi
 
 neofetch

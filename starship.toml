@@ -12,7 +12,7 @@
 
 format = '''
 $username$hostname$localip
-$env_var$directory$git_branch$git_commit$git_status$container$docker_context$c$rust$golang$python$nodejs$java$php$dotnet$elixir$erlang$gcloud$kubernetes$aws$package$memory_usage
+$os$directory$git_branch$git_commit$git_status$container$docker_context$c$rust$golang$python$nodejs$java$php$dotnet$elixir$erlang$gcloud$kubernetes$aws$package$memory_usage
 $sudo$character
 '''
 right_format = '''$cmd_duration$jobs'''
@@ -40,7 +40,7 @@ format = '[$symbol$percentage]($style) '
 disabled = false
 
 [c] # C module
-format = 'lang: [$symbol \($name-$version\)]($style) '
+format = '[$symbol]($style) '
 symbol = 'C'
 style = 'bold blue'
 
@@ -122,20 +122,46 @@ threshold = 75
 symbol = ' '
 style = "bold dimmed green"
 
+[nodejs] # NodeJS
+format = '[$symbol]($style) '
+symbol = ''
+style = 'bold green'
+
+[os] # OS
+format = '[$symbol ]($style)'
+style = 'bold white'
+disabled = false
+
+[os.symbols] # OS symbol
+Windows = ''
+Linux = ''
+Macos = ''
+Raspbian = ''
+Debian = ''
+Ubuntu = ''
+Arch = ''
+Manjaro = ''
+Fedora = ''
+CentOS = ''
+Alpine = ''
+NixOS = ''
+Redhat = ''
+
 [package] # Package
 disabled = false
-format = 'pkg: [$symbol$version]($style) '
+format = '[$symbol\[$version\]]($style) '
+version_format = '${raw}'
 symbol = ''
 
 [python] # Python
-format = 'lang: [$symbol \($version\)]($style) '
+format = '[$symbol]($style) '
 symbol = ''
 style = 'bold blue'
 
 [rust] # Rust
-format = 'lang: [$symbol \($version\)]($style) '
+format = '[$symbol]($style) '
 symbol = ''
-style = 'bold blue'
+style = 'bold orange'
 
 [shell] # Shell
 format = '[$indicator]($style) '

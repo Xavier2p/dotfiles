@@ -4,7 +4,7 @@ then
     alias ls='lsd'
     alias bell='while true; do tput bel; done'
     alias startnix='nix-shell -p ripgrep'
-    alias cdo='cd ~/Library/Mobile\ Documents/iCloud\~md\~obsidian/Documents/Pikachu'
+    alias cdo='cd ~/Library/Mobile\ Documents/iCloud\~md\~obsidian/Documents/πK嘘'
     alias ssh_int='ssh eagle@192.168.1.71'
     alias ssh_ext='ssh eagle@77.206.29.248'
     alias note='~/.tests/notetakingcli/main.sh'
@@ -26,7 +26,7 @@ else
     alias ifconfig='/sbin/ifconfig'
     alias temp='vcgencmd measure_temp'
     alias startserv='py -m http.server'
-    alias neofetch='neofetch --ascii_distro raspbian'
+    # alias neofetch='neofetch --ascii_distro raspbian'
 fi
 
 # GLOBAL ALIASES
@@ -48,7 +48,7 @@ alias grl='git reflog -n 10'
 alias gls='git ls-files'
 alias gsync='$DOTFILES/scripts/gitsync.sh'
 alias neoredhat='neofetch --ascii_distro redhat'
-alias epita='docker run --rm -ti registry.cri.epita.fr/cri/infrastructure/nixpie/nixos-spe:latest bash'
+# alias epita='docker run --rm -ti registry.cri.epita.fr/cri/infrastructure/nixpie/nixos-spe:latest bash'
 alias py='/usr/local/bin/python3'
 alias rcf='vim $DOTFILES/shell_functions.zsh; source ~/.zshrc'
 alias rcp='vim $DOTFILES/zsh_prompt.zsh; source ~/.zshrc'

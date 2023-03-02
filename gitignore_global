@@ -4,3 +4,5 @@
 .DS_Store
 .vscode/
 .idea/
+node_modules/
+__pycache__/

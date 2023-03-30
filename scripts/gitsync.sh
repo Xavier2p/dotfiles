@@ -1,4 +1,4 @@
-PROGNAME="sync"
+PROGNAME="gsync"
 
 
 usage() {
@@ -9,6 +9,7 @@ Usage: $PROGNAME [-h] [-v] [-u] [-m <str>] [-t <str>]
 -m <str>: The message for the commit (default: '[autocommit]: Work in Progress...')
       -u: Add only the uptated files (default: all)
       -v: Enable verbose mode (default: False)
+      -l: Save to local repository (default: False)
       -h: Display this message
 EOF
 echo "\nSTATUS OF THIS REPOSITORY"
@@ -21,8 +22,9 @@ tag=""
 is_tag=false
 all_files=true
 verbose=false
+local=false
 
-while getopts m:t:hvu o; do
+while getopts m:t:hvul o; do
     case $o in
         (m) message=$OPTARG;;
         (t) tag=$OPTARG;
@@ -30,6 +32,7 @@ while getopts m:t:hvu o; do
         (u) all_files=false;;
         (v) verbose=true;;
         (h) usage;;
+        (l) local=true;;
         (*) echo "Invalid Argument '$o', please type '$PROGNAME -h' to display help.";
             exit 1
     esac
@@ -54,9 +57,10 @@ git commit -m "$message"
 
 if test "$is_tag" = true; then
     git tag -a "$tag" -m "$message"
+fi
+
+if test "$local" = false; then
     git push --follow-tags
-else
-    git push
 fi
 
 if test "$verbose" = true; then

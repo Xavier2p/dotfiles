@@ -3,7 +3,7 @@ name: Testing GitHub Actions
 on:
     push:
         tags:
-            - v*
+            - '*'
 
 jobs:
     example:

@@ -1,14 +1,14 @@
 # Welcome on my .zshrc !
 
-fpath+=~/.config/zsh/completions/
+# fpath+=~/.config/zsh/completions/
 source $HOME/.config/dotfiles/rcfile
 source $DOTFILES/zsh_prompt.zsh
 source $DOTFILES/codestats.plugin.zsh
 source ~/.config/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
 source ~/.config/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
-autoload -U bashcompinit
-bashcompinit
+# autoload -U bashcompinit
+# bashcompinit
 
 # AUTOLOAD
 setopt autocd

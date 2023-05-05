@@ -6,3 +6,6 @@
 .idea/
 node_modules/
 __pycache__/
+.env
+secrets/
+target/

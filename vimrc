@@ -90,7 +90,7 @@ set clipboard=unnamed
 let g:rustfmt_autosave = 1
 let g:vim_markdown_folding_disabled = 1
 let python_highlight_all=1
-let g:codestats_api_key='SFMyNTY.V0dGMmFXVnlNbkE9IyNNVGM1TmpBPQ.ZDnafaSIKZi7uZLf59qQdQg2QqqEYm0TwY0ULKNGpDM'
+let g:codestats_api_key=$CODESTATS_API_KEY
 
 
 " Automated line number

@@ -44,7 +44,8 @@ zstyle ':vcs_info:git:*' actionformats '%F{red}]-[%f%F{227} %s%b%m%u%c%
 # export STARSHIP_DISTRO="$ICON"
 
 # Completion
-autoload -Uz compinit && compinit
+fpath+=~/.config/zsh/completions/
+autoload -U compinit && compinit
 
 # case insensitive path-completion 
 zstyle ':completion:*' matcher-list 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]} l:|=* r:|=*' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]} l:|=* r:|=*' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]} l:|=* r:|=*'

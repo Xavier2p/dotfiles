@@ -67,7 +67,7 @@ format = '[ $path]($style)[$read_only]($read_only_style) '
 truncation_length = 3
 
 [docker_context] # Docker
-format = 'via [$symbol $context](blue bold)'
+format = '[$symbol ](blue bold)'
 symbol = ''
 
 [fill] # Fill
@@ -119,12 +119,12 @@ style = 'bold blue'
 disabled = false
 format = '[\[](drawings)[$symbol$ram\($ram_pct\)]($style)[\]](drawings)'
 threshold = 75
-symbol = ' '
+symbol = ' '
 style = "bold dimmed green"
 
 [nodejs] # NodeJS
 format = '[$symbol]($style) '
-symbol = ''
+symbol = ''
 style = 'bold green'
 
 [os] # OS
@@ -151,11 +151,11 @@ Redhat = ''
 disabled = false
 format = '[$symbol\[$version\]]($style) '
 version_format = '${raw}'
-symbol = ''
+symbol = ''
 
 [python] # Python
 format = '[$symbol]($style) '
-symbol = ''
+symbol = ''
 style = 'bold blue'
 
 [rust] # Rust

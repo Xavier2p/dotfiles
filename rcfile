@@ -1,7 +1,6 @@
 # RC file, loaded by both BASH and ZSH
 
 DOTFILES=$HOME/.config/dotfiles
-CODESTATS_API_KEY="SFMyNTY.V0dGMmFXVnlNbkE9IyNNVGM1TmpBPQ.ZDnafaSIKZi7uZLf59qQdQg2QqqEYm0TwY0ULKNGpDM"
 
 LFILE="/etc/*-release"
 MFILE="/System/Library/CoreServices/SystemVersion.plist"

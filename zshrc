@@ -7,8 +7,8 @@ source $DOTFILES/codestats.plugin.zsh
 source ~/.config/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
 source ~/.config/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
-# autoload -U bashcompinit
-# bashcompinit
+autoload -U bashcompinit
+bashcompinit
 
 # AUTOLOAD
 setopt autocd

@@ -28,9 +28,9 @@ endif
 call plug#begin('~/.vim/plugged')
     Plug 'itchyny/lightline.vim'
     Plug 'preservim/nerdtree'
-    Plug 'vim-scripts/indentpython.vim'
+    " Plug 'vim-scripts/indentpython.vim'
     Plug 'frazrepo/vim-rainbow'
-    Plug 'chrisbra/vim-zsh'
+    " Plug 'chrisbra/vim-zsh'
     Plug 'tpope/vim-fugitive'
     Plug 'airblade/vim-gitgutter'
     Plug 'Xuyuanp/nerdtree-git-plugin'
@@ -41,7 +41,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     Plug 'github/copilot.vim'
     Plug 'ryanoasis/vim-devicons'
-    Plug 'sainnhe/sonokai'
+    " Plug 'sainnhe/sonokai'
     Plug 'sheerun/vim-polyglot'
     Plug 'haishanh/night-owl.vim'
 call plug#end()
@@ -90,7 +90,7 @@ set clipboard=unnamed
 let g:rustfmt_autosave = 1
 let g:vim_markdown_folding_disabled = 1
 let python_highlight_all=1
-let g:codestats_api_key=$CODESTATS_API_KEY
+let g:codestats_api_key='SFMyNTY.V0dGMmFXVnlNbkE9IyNNVGM1TmpBPQ.ZDnafaSIKZi7uZLf59qQdQg2QqqEYm0TwY0ULKNGpDM'
 
 
 " Automated line number

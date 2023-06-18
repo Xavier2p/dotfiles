@@ -31,9 +31,8 @@ fi
 ## Update files
 alias mk='vim Makefile'
 alias rc='echo "$ZSHRC"; vim ~/.zshrc; source ~/.zshrc'
-alias rca='vim $DOTFILES/aliases.zsh; source ~/.zshrc'
-alias rcf='vim $DOTFILES/shell_functions.zsh; source ~/.zshrc'
-alias rcp='vim $DOTFILES/zsh_prompt.zsh; source ~/.zshrc'
+alias rca='echo "$ALIASES"; vim $DOTFILES/shell/aliases.zsh; source ~/.zshrc'
+alias rcc='echo "$COMPLETIONS"; vim $DOTFILES/shell/completions.zsh; source ~/.zshrc'
 alias vrc='echo "$VIM"; vim ~/.vimrc'
 
 ## ls
@@ -59,7 +58,8 @@ alias gsw='git switch'
 alias dkr='docker'
 alias dkrc='docker compose'
 alias make='make -Bj'
-alias py='/usr/local/bin/python3'
+alias py='/opt/homebrew/bin/python3'
+alias pip='/opt/homebrew/bin/pip3'
 alias tf='terraform'
 
 ## misc
@@ -72,3 +72,7 @@ alias reseterm='clear && neoredhat && cd'
 alias sl='sl -e'
 alias vimexam='vim -u vimrc'
 alias vimini='vim -u ~/.viminirc'
+
+function cd {
+    builtin cd "$@" && ls
+}

@@ -1,6 +1,7 @@
 # RC file, loaded by both BASH and ZSH
 
 DOTFILES=$HOME/.config/dotfiles
+source $DOTFILES/.env
 
 LFILE="/etc/*-release"
 MFILE="/System/Library/CoreServices/SystemVersion.plist"
@@ -10,6 +11,6 @@ elif [[ -f $MFILE ]]; then
   _distro="macos"
 fi
 
-source $DOTFILES/shell_alias.zsh
+source $DOTFILES/aliases.zsh
 source $DOTFILES/shell_functions.zsh
 export STARSHIP_CONFIG=$DOTFILES/starship.toml

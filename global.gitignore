@@ -1,0 +1,25 @@
+# c
+*.o
+*.d
+*.exe
+
+# rust
+target/
+
+# js
+node_modules/
+
+# python
+__pycache__/
+
+# env
+.env
+secrets/
+
+# macos
+.DS_Store
+
+# editors
+.vscode/
+.idea/
+*.swp

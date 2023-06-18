@@ -1,10 +1,10 @@
 # Makefile
 
 config: execute
-	./install.sh
-	./config.sh
+	./scripts/install.sh
+	./scripts/config.sh
 
 execute:
-	chmod +x config.sh
-	chmod +x install.sh
-	chmod +x update.sh
+	chmod +x ./scripts/config.sh
+	chmod +x ./scripts/install.sh
+	chmod +x ./scripts/update.sh

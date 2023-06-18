@@ -38,11 +38,11 @@ source ~/.zshrc
 ├── .config
 │   ├── dotfiles
 │   │   ├── config
-│   │   │   ├── alacritty.yml    => ~/.config/alacritty/alacritty.yml
-│   │   │   ├── conf.vim         => ~/.vimrc
-│   │   │   ├── git.conf         => ~/.gitconfig
+│   │   │   ├── alacritty.yml       => ~/.config/alacritty/alacritty.yml
+│   │   │   ├── conf.vim            => ~/.vimrc
+│   │   │   ├── git.conf            => ~/.gitconfig
 │   │   │   ├── global.gitignore
-│   │   │   ├── neofetch.conf    => ~/.config/neofetch/config.conf
+│   │   │   ├── neofetch.conf       => ~/.config/neofetch/config.conf
 │   │   │   └── starship.toml
 │   │   ├── plugins
 │   │   │   └── codestats
@@ -54,9 +54,9 @@ source ~/.zshrc
 │   |   |   ├── aliases.zsh
 │   │   │   ├── ascii.sh
 │   │   │   ├── completion.zsh
-│   │   │   ├── entry.bash      => ~/.bashrc
+│   │   │   ├── entry.bash          => ~/.bashrc
 │   |   |   ├── entry.sh
-│   │   │   └── entry.zsh       => ~/.zshrc
+│   │   │   └── entry.zsh           => ~/.zshrc
 │   │   ├── Makefile
 │   │   └── README.md
 │   ├── packages

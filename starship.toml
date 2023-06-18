@@ -163,8 +163,8 @@ symbol = ' '
 display_private = true
 
 [python] # Python
-format = '[$symbol]($style) '
-symbol = ''
+format = '[$symbol$virtualenv]($style) '
+symbol = ' '
 style = 'bold blue'
 
 [rust] # Rust

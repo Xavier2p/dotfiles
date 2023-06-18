@@ -11,14 +11,13 @@
 ### '''
 
 format = '''
-$username$hostname$localip
-$os$directory$git_branch$git_commit$git_status$container$docker_context$c$rust$golang$python$nodejs$java$php$dotnet$elixir$erlang$gcloud$kubernetes$aws$package$memory_usage
-$sudo$character
+$username$hostname$localip$os$directory$git_branch$git_commit$git_status$container$c$rust$golang$python$nodejs$java$php$dotnet$elixir$erlang$gcloud$kubernetes$aws$package$docker_context$terraform$fill$memory_usage
+$nix_shell$sudo$character
 '''
 right_format = '''$cmd_duration$jobs'''
 
 continuation_prompt = "➜"
-add_newline = false
+add_newline = true
 scan_timeout = 10
 palette = 'main'
 
@@ -67,11 +66,11 @@ format = '[ $path]($style)[$read_only]($read_only_style) '
 truncation_length = 3
 
 [docker_context] # Docker
-format = '[$symbol ](blue bold)'
+format = '[\[$symbol $context\] ]($style) '
 symbol = ''
 
 [fill] # Fill
-symbol = "─"
+symbol = " "
 style = "drawings"
 disabled = false
 
@@ -89,7 +88,8 @@ tag_disabled = false
 [git_metrics] # Git metrics
 added_style = 'bold green'
 deleted_style = 'bold red'
-format = '[\[](bold yellow)[+$added]($added_style)[/](bold yellow)[-$deleted]($deleted_style)[\]](bold yellow) '
+only_nonzero_diffs = true
+format = '[+$added]($added_style)[-$deleted]($deleted_style) '
 disabled = false
 
 [git_status] # Git status
@@ -98,7 +98,7 @@ style = 'bold yellow'
 
 [hostname] # Hostname
 ssh_only = true
-format = '[@](bold drawings)[$hostname]($style)'
+format = ' on [$hostname]($style)'
 style = 'bold green'
 
 [jobs] # Jobs
@@ -112,19 +112,26 @@ disabled = false
 [localip] # Local IP
 ssh_only = true
 disabled = false
-format = ' [\[$localipv4\]]($style)'
+format = ''' [\[$localipv4\]]($style)
+'''
 style = 'bold blue'
 
 [memory_usage]
 disabled = false
-format = '[\[](drawings)[$symbol$ram\($ram_pct\)]($style)[\]](drawings)'
+format = '[\[$symbol$ram\($ram_pct\)\]]($style)'
 threshold = 75
 symbol = ' '
 style = "bold dimmed green"
 
+[nix_shell] # Nix shell
+format = '[$symbol$state-$name]($style) '
+symbol = ' '
+style = 'bold blue'
+
 [nodejs] # NodeJS
 format = '[$symbol]($style) '
 symbol = ''
+version_format = 'v${major}'
 style = 'bold green'
 
 [os] # OS
@@ -149,9 +156,11 @@ Redhat = ''
 
 [package] # Package
 disabled = false
-format = '[$symbol\[$version\]]($style) '
+format = '[\[$symbol$version\]]($style) '
+style = 'dimmed orange'
 version_format = '${raw}'
-symbol = ''
+symbol = ' '
+display_private = true
 
 [python] # Python
 format = '[$symbol]($style) '
@@ -177,6 +186,13 @@ format = '[$symbol]($style) '
 symbol = '#'
 style = 'bold red'
 disabled = false
+
+[terraform] # Terraform
+format = '[$symbol$workspace]($style) '
+symbol = '󱁢 '
+style = 'bold 105'
+disabled = false
+version_format = 'v${raw}'
 
 [time] # Time
 format = '[\[](drawings)[$time]($style)[\]](drawings)'

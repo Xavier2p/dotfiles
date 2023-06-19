@@ -16,7 +16,7 @@ setopt CORRECT
 setopt CORRECT_ALL
 
 autoload -U +X bashcompinit && bashcompinit
-complete -o nospace -C /opt/homebrew/bin/terraform terraform
+complete -o nospace -C /Users/xavier2p/.nix-profile/bin/terraform terraform
 
 ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 bindkey '\t' autosuggest-accept

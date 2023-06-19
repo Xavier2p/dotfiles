@@ -22,3 +22,4 @@ fi
 neofetch
 ls
 # arch --arch x86_64 <cmd> to exec cmd in arch x86_64
+

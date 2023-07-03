@@ -10,15 +10,18 @@ then # Only for macOS
 
     # programs
     alias adb='~/.adb/adb'
-    alias code='open -a "Visual Studio Code"'
+    alias code='open -a "Visual Studio Code - Insiders"'
     alias fastboot='~/.adb/fastboot'
-    alias ls='lsd'
+    alias lal='la -l --header'
+    alias ll='ls -l --header'
+    alias ls='lsd -X'
     alias mariadb='docker exec -it mariadb mariadb -u root -p'
     alias ql='qlmanage -p'
     alias tree='ls --tree'
 
     # others
     alias bell='while true; do tput bel; done'
+    alias "nixos-rebuild"='echo rebuilding in progress...'
 else # Only for Linux
     alias bat='batcat'
     alias ifconfig='/sbin/ifconfig'
@@ -38,8 +41,8 @@ alias vrc='echo "$VIM"; vim ~/.vimrc'
 ## ls
 alias l='ls -lh'
 alias la='ls -Ah'
-alias lal='la -l --header'
-alias ll='ls -l --header'
+alias lal='ls -Ahl'
+alias ll='ls -l'
 
 ## git
 alias gaa='git add -A'
@@ -63,6 +66,7 @@ alias pip='/opt/homebrew/bin/pip3'
 alias tf='terraform'
 
 ## misc
+alias ':q'='exit'
 alias cdot='cd $DOTFILES'
 alias clonetp='~/scripts/clonetp.sh'
 alias neobzh='neofetch --ascii_distro trisquel'

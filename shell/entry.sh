@@ -16,6 +16,7 @@ source $DOTFILES/.env
 source $DOTFILES/shell/aliases.zsh
 source $DOTFILES/shell/ascii.sh
 export STARSHIP_CONFIG=$DOTFILES/config/starship.toml
+export EDITOR="vim"
 
 
 TIMEFMT=$'----------------\nCPU\t%P\nuser\t%*U\nsystem\t%*S\ntotal\t%*E'

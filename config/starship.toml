@@ -71,7 +71,7 @@ symbol = ''
 
 [fill] # Fill
 symbol = " "
-style = "drawings"
+# style = "drawings"
 disabled = false
 
 [git_branch] # Git branch

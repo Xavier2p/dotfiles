@@ -1,8 +1,11 @@
 # Completion
 source $HOME/.config/zsh/nix-zsh-completions/nix-zsh-completions.plugin.zsh
-fpath+=~/.config/zsh/completions/
-fpath+=~/.config/zsh/nix-zsh-completions
-fpath+=~/.config/zsh/zsh-completions
+fpath=(
+    ~/.config/zsh/completions
+    ~/.config/zsh/nix-zsh-completions
+    ~/.config/zsh/zsh-completions
+    "${fpath[@]}"
+)
 autoload -U compinit && compinit
 
 # case insensitive path-completion

@@ -11,7 +11,7 @@
 ### '''
 
 format = '''
-$username$hostname$localip$os$directory$git_branch$git_commit$git_status$container$c$rust$golang$python$nodejs$java$php$dotnet$elixir$erlang$gcloud$kubernetes$aws$package$docker_context$terraform$fill$memory_usage
+$username$hostname$localip$os$directory$git_branch$git_commit$git_status$container$c$rust$golang$python$nodejs$java$php$dotnet$elixir$erlang$gcloud$kubernetes$aws$package$terraform$docker_context$fill$memory_usage
 $nix_shell$sudo$character
 '''
 right_format = '''$cmd_duration$jobs'''
@@ -66,7 +66,8 @@ format = '[ $path]($style)[$read_only]($read_only_style) '
 truncation_length = 3
 
 [docker_context] # Docker
-format = '[\[$symbol $context\] ]($style) '
+format = '[$symbol ://$context]($style) '
+only_with_files = false
 symbol = ''
 
 [fill] # Fill
@@ -121,7 +122,7 @@ disabled = false
 format = '[\[$symbol$ram\($ram_pct\)\]]($style)'
 threshold = 75
 symbol = ' '
-style = "bold dimmed green"
+style = "bold red"
 
 [nix_shell] # Nix shell
 format = '[$symbol$state-$name]($style) '
